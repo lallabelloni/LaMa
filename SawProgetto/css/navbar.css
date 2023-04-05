@@ -1,0 +1,73 @@
+:root {
+    --bianco: #FFFFFF;
+    --marrone-scuro: #5D3A00;
+    --marrone-chiaro: #E7CFBC;
+    --filter-marrone-scuro: invert(20%) sepia(36%) saturate(2760%) hue-rotate(24deg) brightness(97%) contrast(102%); /* --marrone-scuro ma con -> https://codepen.io/sosuke/pen/Pjoqqp */
+    --filter-bianco: invert(100%) sepia(0%) saturate(0%) hue-rotate(46deg) brightness(100%) contrast(103%);
+    letter-spacing: 0.05em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.page {
+    margin-top: 7%;
+}
+
+.topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background-color: var(--bianco);
+    max-height: 35pt;
+} 
+.topnav p {
+    margin: 0px 0px;
+    transform: translate(-8pt, 15pt);
+    letter-spacing: 0.1em;
+    font-size: larger;
+}
+.topnav a {
+    filter: var(--filter-marrone-scuro)
+}
+.topnav .imp a {
+    padding-right: 18pt;    
+}
+.topnav .imp {
+    transform: translateY(8pt);
+    margin: 2pt;
+}
+.logo {
+    transform: translateY(5pt);
+    display: flex;
+    flex-direction: row;
+    padding-left: 18pt;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    top:0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 100;
+}
+nav .color{
+    width: 100%;
+    height: 7pt;
+    background-color: var(--marrone-scuro);
+}
+
+.logo:hover,
+.topnav .imp img:hover{
+    transform: translatey(3pt);
+    box-shadow: none;
+    animation: ani2 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani2 {
+    0% {
+        transform: translateY(3pt);
+    }
+    100% {
+        transform: translateY(5pt);
+    }
+}
