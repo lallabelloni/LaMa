@@ -22,7 +22,7 @@
    <div class="imp">
       <a><img src="..\layout\cerca.svg" alt="immagine di una lente di ingrandimento stilizzata"></a>
       <a><img src="..\layout\carrello.svg" alt="immagine di un carrello per la spesa"></a>
-      <a><img onclick="window.location.href='profilo.php'" src="..\layout\profilo.svg" alt="immagine di una persona stilizzato"></a>
+      <a><img onclick="window.location.href='registration.php'" src="..\layout\profilo.svg" alt="immagine di una persona stilizzato"></a>
    </div>
 </div>
 <div class="color"></div>
