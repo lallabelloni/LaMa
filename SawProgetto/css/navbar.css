@@ -8,9 +8,9 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.page {
+/* .page {
     margin-top: 7%;
-}
+} */
 
 .topnav {
     display: flex;
@@ -36,7 +36,7 @@
     margin: 2pt;
 }
 .logo {
-    transform: translateY(5pt);
+    transform: translateY(0pt);
     display: flex;
     flex-direction: row;
     padding-left: 18pt;
@@ -59,7 +59,7 @@ nav .color{
 
 .logo:hover,
 .topnav .imp img:hover{
-    transform: translatey(3pt);
+    transform: translateY(3pt);
     box-shadow: none;
     animation: ani2 0.4s ease-in-out infinite alternate;
 }
