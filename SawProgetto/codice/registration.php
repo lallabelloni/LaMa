@@ -5,32 +5,34 @@
 <title>Registration</title>
 <meta name="keywords" content="Registration">
 <meta name="author" content="Belloni Laura, Contegno Matteo">
-<link rel="stylesheet" type="text/css" href="stylee.css">
+<link rel="stylesheet" type="text/css" href="../css/registration.css">
 </head>
 <body>
-<div class="overlay">
-   <form>
-      <div class="container">
-         <header>
-         <h2>LaMa</h2>
-         <p>Registrati usando una email valida e una password</p>
-         </header>
-         <div class="field-set">
-            <input class="form-input" type="text" name="firstname" placeholder="Nome">
-            <input class="form-input" type="text" name="lastname" placeholder="Cognome">
-            <input class="form-input" type="text" name="email" placeholder="Email" required>
-            <input class="form-input" type="password" name="pass" placeholder="Password" required>
-            <input class="form-input" type="password" name="confirm" placeholder="Conferma password" required>
-            <button class="log-in" type="submit" name="submit"> Registrati </button>
-         </div>
-         <div class="other">
-            <button class="btn submits frgt-pass">Password dimenticata</button>
-            <button class="btn submits sign-up">Accedi</button>
-               <i class="fa fa-user-plus" aria-hidden="true"></i>
-            </button>
-         </div>
+<?php session_start();?>
+   <header>
+      <div onclick="window.location.href='home.php'" class="logo">
+         <img src="..\layout\lama.svg" alt="Logo di Lama"></img>
+         <b>LaMa</b>
       </div>
-   </form>
-</div>
+      <div class="linkTo"> 
+	      <p> Hai già un account? <a href="login.php" id="aRegister">Accedi</a></p>
+      </div>
+   </header>
+   <div class = "box-form">
+      <p>Registrati usando una email valida e una password</p>
+      <form class="form" action="registration.php" method="post">
+         <input type="text" name="firstname" placeholder="Nome*" required><br>
+         <input type="text" name="lastname" placeholder="Cognome*" required><br>
+         <input type="text" name="email" placeholder="Email*" required><br>
+         <input type="password" name="pass" placeholder="Password*" required><br>
+         <input type="password" name="confirm" placeholder="Conferma password*" required><br>
+         <p>*Campo obbligatorio</p>
+         <input type="submit" name="submit" value="REGISTRATI" class="button" rel="noopener noreferrer">
+      </form>
+      
+   </div>
+   <footer>
+      <p class="footer">© 2023 Belloni Laura, Contegno Matteo</p>
+   </footer>
 </body>
 </html>
