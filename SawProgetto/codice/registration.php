@@ -5,13 +5,12 @@
 <title>Registration</title>
 <meta name="keywords" content="Registration">
 <meta name="author" content="Belloni Laura, Contegno Matteo">
-<link rel="stylesheet" type="text/css" href="../css/registration.css">
+<link rel="stylesheet" type="text/css" href="../css/form.css">
 </head>
 <body>
 <?php session_start();?>
    <header>
       <div onclick="window.location.href='home.php'" class="logo">
-         <img src="..\layout\lama.svg" alt="Logo di Lama"></img>
          <b>LaMa</b>
       </div>
       <div class="linkTo"> 
@@ -20,7 +19,7 @@
    </header>
    <div class = "box-form">
       <p>Registrati usando una email valida e una password</p>
-      <form class="form" action="registration.php" method="post">
+      <form action="registration.php" method="post">
          <input type="text" name="firstname" placeholder="Nome*" required><br>
          <input type="text" name="lastname" placeholder="Cognome*" required><br>
          <input type="text" name="email" placeholder="Email*" required><br>
