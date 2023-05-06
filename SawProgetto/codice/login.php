@@ -5,28 +5,27 @@
 <title>Login</title>
 <meta name="keywords" content="Login">
 <meta name="author" content="Belloni Laura, Contegno Matteo">
-<link rel="stylesheet" type="text/css" href="stylee.css">
+<link rel="stylesheet" type="text/css" href="../css/form.css">
 </head>
 <body>
-<div class="container">
-   <form>
-      <header>
-      <h2>LaMa</h2>
-      <p>Accedi usando una email e una password</p>
-      </header>
-      <div class="field-set">
-         <input class="form-input" type="text" name="email" placeholder="Email" required>
-         <input class="form-input" type="password" name="pass" placeholder="Password" required>
-         <button class="log-in" type="submit" name="submit"> Accedi </button>
-         <div class="other">
-            <button class="submits frgt-pass">Password dimenticata</button>
-            <button class="submits sign-up">Registrati</button>
-               <i class="fa fa-user-plus" aria-hidden="true"></i>
-            </button>
-         </div>
-         </div>
-      </div>
+<?php session_start();?>
+   <header>
+   <div onclick="window.location.href='home.php'" class="logo">
+      <b>LaMa</b>
+   <div class="linkTo"> 
+      <p> Non hai un account? <a href="registration.php" id="aRegister">Registrati</a></p>
+   </div>
+   </header>
+   <div class = "box-form">
+      <p>Accedi usando una email valida e una password</p>
+   <form class="form" action="login.php" method="post">
+      <input class="form-input" type="text" name="email" placeholder="Email" required><br>
+      <input class="form-input" type="password" name="pass" placeholder="Password" required><br>
+      <input type="submit" name="submit" value="Accedi" class="button" rel="noopener noreferrer"> 
    </form>
-</div>
+   </div>
+   <footer>
+      <p class="footer">© 2023 Belloni Laura, Contegno Matteo</p>
+   </footer>
 </body>
 </html>
